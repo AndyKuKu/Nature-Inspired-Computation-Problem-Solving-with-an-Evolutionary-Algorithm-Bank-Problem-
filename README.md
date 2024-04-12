@@ -1,3 +1,21 @@
 # Nature-Inspired-Computation-Problem-Solving-with-an-Evolutionary-Algorithm-Bank-Problem-
 
-This project aims to develop an evolutionary algorithm system to maximize the amount of money that can be packed into a security van, given a set of 100 bags of money with different denominations, weight, and value. The system reads the information from a file and decides which bags to include in the van based on their weight and value. The fitness function and representation of the problem are left to the developer's discretion. The evolutionary algorithm follows a specific procedure that involves generating an initial population, selection, crossover, mutation, and replacement. The experiment aims to explore the effects of tournament size, population size, and mutation rate on the system's performance. The performance evaluation will be based on a number of randomly seeded trials for each setting of t, p, m, to provide robust results. The termination criterion for the algorithm is set to a maximum of 10,000 fitness evaluations.
+This project aims to develop an evolutionary algorithm system to maximize the amount of money that can be packed into a security van (0/1 Knapsack Problem), given a set of 100 bags of money with different denominations, weight, and value. 
+
+Dataset:
+The algorithm is tested on a dataset containing items with assigned weights and values. The goal is to select items whose total weight does not exceed a specified limit (285 kg), while maximizing the total value.
+
+Implementation Details:
+1. Generates initial population randomly
+2. Uses binary tournament selection for parents
+3. Applies single-point crossover and mutation
+4. Implements weakest replacement strategy
+5. Terminates after maximum fitness evaluations (10,000)
+   
+Key Findings:
+1. Best results with small population size (2), tournament size (2), and mutation rate (1)
+2. Removing mutation or crossover operations impairs solution quality
+3. Suggests using Pareto tournament selection for multi-objective extension
+   
+Results:
+The best solution found has a total value of 4353£ with a total weight of 284.0 kg, very close to the 285 kg limit.
